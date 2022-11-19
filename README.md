@@ -17,7 +17,7 @@ Reference Repository : [Azure-Webapp-java](https://github.com/MontuD/azure-webap
 -  Compile it and package using maven 
     use mvn package
 --------------
-2. Docker 
+2. Docker -\n
 Dockerize the above jar into Docker Image to be pushed on Docker Hub
 In this section preparing a Dockerfile that helps for creating docker image that we can use to deploy on azure.
 --------------
@@ -36,6 +36,10 @@ In this section preparing a Dockerfile that helps for creating docker image that
 
 
 
-   
+    
+
+
+
+
 
 Login to Azure Portal
