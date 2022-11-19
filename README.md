@@ -8,7 +8,6 @@ This repository Contains step that helps me to run Java spring boot app on azure
 3. Docker hub account - not using azure container registry.
 
 # Steps
---------------
 1. Java -
 Compile & Package
 --------------
@@ -20,14 +19,23 @@ Reference Repository : [Azure-Webapp-java](https://github.com/MontuD/azure-webap
 --------------
 2. Docker 
 Dockerize the above jar into Docker Image to be pushed on Docker Hub
+In this section preparing a Dockerfile that helps for creating docker image that we can use to deploy on azure.
 --------------
+ - I had Created my own image on the top of ubuntu:latest.
+ - installed java (version 11) and maven (version 3.6) on it.
+ - Pushed on Docker hub.
+ - On the top of it Copied the created jar file from the java section using COPY command
+ COntent of Dockerfile will be
+ FROM montud/java11-with-mvn 
+ WORKDIR /javawebapp
+ COPY /projectdir/target/*.jar /javawebapp/spring-app.jar
+ ENV PORT 8080
+ EXPOSE PORT 8080
+ ENTRYPOINT ["java" , "-jar","spring-app.jar"]
+ 
 
 
 
-    
-
-
-
-
+   
 
 Login to Azure Portal
