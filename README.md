@@ -17,10 +17,10 @@ Reference Repository : [Azure-Webapp-java](https://github.com/MontuD/azure-webap
 -  Compile it and package using maven 
     use mvn package
 --------------
-2. Docker -\n
-Dockerize the above jar into Docker Image to be pushed on Docker Hub
-In this section preparing a Dockerfile that helps for creating docker image that we can use to deploy on azure.
+2. Docker  
 --------------
+Dockerize the above jar into Docker Image to be pushed on Docker Hub.
+In this section preparing a Dockerfile that helps for creating docker image that we can use to deploy on azure.
  - I had Created my own image on the top of ubuntu:latest.
  - installed java (version 11) and maven (version 3.6) on it.
  - Pushed on Docker hub.
